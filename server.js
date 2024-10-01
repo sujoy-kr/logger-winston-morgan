@@ -13,6 +13,10 @@ app.use(
 )
 
 app.get('/', (req, res) => {
+    logger.info(
+        `Client IP: ${req.ip}, Method: ${req.method}, URL: ${req.originalUrl}`
+    )
+
     res.send('Hello, world!')
 })
 
